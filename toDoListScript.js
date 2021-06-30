@@ -46,7 +46,7 @@ function showtasks(){
     // display list
     let newLiTag = "";
     listArray.forEach((element, index) => {
-    newLiTag += `<li>${element}<span class="icon" onclick="editTask(${index})"><i class="fas fa-edit"></i></span><span class="icon" onclick="delTask(${index})"><i class="fas fa-trash"></i></span></li>`;
+    newLiTag += `<li>${element}<span class="icon1" onclick="editTask(${index})"><i class="fas fa-edit"></i></span><span class="icon2" onclick="delTask(${index})"><i class="fas fa-trash"></i></span></li>`;
     });
     document.querySelector(".theList").innerHTML = newLiTag;
 
@@ -87,3 +87,4 @@ function clearAll(){
     localStorage.setItem("Name of new task", JSON.stringify(listArray));
     showtasks();
 }
+    
