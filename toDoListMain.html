@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="toDoListStyle-T.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+
+<body>
+    <header>
+        <div class="bar">
+            <p>*username <a href="#" target="blank"><button>Log out</button></a></p>
+        </div>
+        <div class="title1">
+            <h1>My To Do List</h1>
+        </div>        
+    </header>
+    <main>
+        <div class="newtask">
+            <input onkeyup="activateaddbtn()" placeholder="Enter new task" id="inputbox">
+            <button onclick="addtask()" id="addbtn">Add</button>
+        </div>
+
+
+        <ul class="theList" id="theList">
+        </ul>
+        <p class="remark">You have <span class="pendingTasks"></span> pending tasks
+        <button onclick="clearAll()">Clear All</button></p>
+    </main>
+    <script src="toDoListScript.js"></script>
+</body>
+</html>
