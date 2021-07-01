@@ -22,7 +22,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $showError = "Invalid Credentials";
     }
 }
-    
+
+
+
+
 ?>
 
 <!doctype html>
@@ -36,6 +39,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>Login</title>
+    <?php require 'partials/_nav.php'?>
     <style>
         .header {
   padding: 30px;
@@ -134,18 +138,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
     body {
     
-    background: #FF616D; /*fallback for old browsers*/ 
+   background: #FF616D;  
     background: -webkit-linear-gradient(right, #FF616D, #FF616D);
     background: -moz-linear-gradient(right, #FF616D,#FF616D);
     background: -o-linear-gradient(right,#FF616D, #FF616D);
     background: linear-gradient(to left, #FF616D, #FF616D);
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;      
+    -moz-osx-font-smoothing: grayscale; 
+      
     }
     </style>
+    <link rel="stylesheet" href="back.css">
   </head>
-  <body >
+  <body>
     
  <div class="header">
   <h1 class="header">TO DO LIST</h1> 
