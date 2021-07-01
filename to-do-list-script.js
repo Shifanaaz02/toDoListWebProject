@@ -1,3 +1,5 @@
+document.querySelector(".bar").classList.add("active");
+
 function activateaddbtn(){
     let taskName = document.getElementById("inputbox").value;
     if(taskName.trim() != 0){
@@ -40,7 +42,7 @@ function showtasks(){
     }else{
         listArray = JSON.parse(localstoragedata);
     }
-    var pendingTasksNumber = document.querySelector(".pendingTasks");  //
+    var pendingTasksNumber = document.querySelector(".pendingTasks");  
     pendingTasksNumber.textContent = listArray.length;
 
     // display list
@@ -51,7 +53,6 @@ function showtasks(){
     document.querySelector(".theList").innerHTML = newLiTag;
 
     const x = document.querySelector(".newtask input");
-    //x = document.getElementById("inputbox").value;
     x.value = "";
 }
 
@@ -65,30 +66,17 @@ function delTask(index){
 }
 
 function editTask(index){
-    // const taskName = document.getElementById("editbox").value;           /////made commentt today
-    //let localstoragedata = localStorage.getItem("Name of new task");
-
     listArray[index] = taskName;
     localStorage.setItem("Name of new task", JSON.stringify(listArray));
 
-
-    // let localstoragedata = localStorage.getItem("Name of new task");
-    // listArray = JSON.parse(localstoragedata);
-    // listArray.splice(index, 1);
-    // localStorage.setItem("Name of new task", JSON.stringify(listArray));
-    
     showtasks();
-    // const y = document.querySelector(".edittask input");                 //////made commnt today
-    // y.value = "";                                                       //....''......
     document.querySelector(".edittask button").classList.remove("active");
 }
 
 function update(){
     globalThis.taskName = document.getElementById("editbox").value;
-    // console.log(taskName);
     const y = document.querySelector(".edittask input");
     y.value = "";
-    // editTask(index);
 }
 
 function clearAll(){

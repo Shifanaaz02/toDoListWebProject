@@ -5,15 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MY LIST</title>
-    <link rel="stylesheet" href="NEW.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    
+    <link rel="stylesheet" href="to-do-list-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>    
 </head>
 
 <body>
-    <header>
+    <header>       
         <div class="bar">
-            <p>*username <a href="#" target="blank"><button>Log out</button></a></p>
+            <p>WELCOME<a href="login.php"><span style="margin: 1200px; margin-right: 0%;"><button>Log out</button></span></a></p>
         </div>
         <div class="title1">
             <h1>My To Do List &#10004</h1>
@@ -34,10 +33,9 @@
         </ul>
         <div class = "remark">
            <span>You have <span class="pendingTasks"></span> pending tasks</span>
-            <!--<p class="remark">You have <span class="pendingTasks"></span> pending tasks-->
-            <button onclick="clearAll()">Clear All</button>   <!--</p>-->
+            <button onclick="clearAll()">Clear All</button>
         </div>
     </main>
-    <script src="NEW.js"></script>
+    <script src="to-do-list-script.js"></script>
 </body>
 </html>
