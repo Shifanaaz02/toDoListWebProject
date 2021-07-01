@@ -140,7 +140,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </style>
   </head>
   <body>
-    <!-- <?php require 'partials/_nav.php' ?> -->
+    <?php require 'partials/_nav.php' ?>
     <?php
     if($showAlert){
     echo ' <div class="alert alert-success alert-dismissible fade show" role="alert">
